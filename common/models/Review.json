@@ -1,0 +1,94 @@
+{
+  "name": "Review",
+  "plural": "Reviews",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "schoolId": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "pros": {
+      "type": "string",
+      "required": true
+    },
+    "contras": {
+      "type": "string",
+      "required": true
+    },
+    "course": {
+      "type": "string",
+      "required": true
+    },
+    "weeks": {
+      "type": "number",
+      "required": true
+    },
+    "recommend": {
+      "type": "boolean",
+      "required": true
+    },
+    "advise": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    },
+    "generalPoints": {
+      "type": "number",
+      "required": true
+    },
+    "localizationPoints": {
+      "type": "number",
+      "required": true
+    },
+    "structurePoints": {
+      "type": "number",
+      "required": true
+    },
+    "teachersPoints": {
+      "type": "number",
+      "required": true
+    },
+    "staffPoints": {
+      "type": "number",
+      "required": true
+    },
+    "teachingMethodPoints": {
+      "type": "number",
+      "required": true
+    },
+    "startDate": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "city": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": "cityId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId"
+    },
+    "school": {
+      "type": "belongsTo",
+      "model": "School",
+      "foreignKey": "schoolId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

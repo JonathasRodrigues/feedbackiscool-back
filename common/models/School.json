@@ -1,0 +1,67 @@
+{
+  "name": "School",
+  "plural": "Schools",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "longitude": {
+      "type": "number",
+      "required": true
+    },
+    "latitude": {
+      "type": "number",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "site": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "cityId": {
+      "type": "string",
+      "required": true
+    },
+    "generalRating" : {
+      "type": "number"
+    },
+    "reviews" : {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "school": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": "cityId"
+    },
+    "reviews" : {
+      "type": "hasMany",
+      "model": "Review",
+      "foreignKey": "schoolId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

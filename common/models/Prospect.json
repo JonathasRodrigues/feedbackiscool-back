@@ -1,0 +1,48 @@
+{
+  "name": "Prospect",
+  "plural": "Prospects",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "citiesId": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "courseType": {
+      "type": "string",
+      "required": true
+    },
+    "weeks": {
+      "type": "number",
+      "required": true
+    },
+    "expectedDate": {
+      "type": "date",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "school": {
+      "type": "belongsTo",
+      "model": "City",
+      "foreignKey": "citiesId"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
