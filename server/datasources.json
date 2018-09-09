@@ -3,10 +3,10 @@
     "host": "localhost",
     "port": 27017,
     "url": "",
-    "database": "whatschool",
-    "password": "",
+    "database": "feedbackiscool",
+    "password": "34361985440324",
     "name": "db",
-    "user": "",
+    "user": "joohny",
     "connector": "mongodb"
   }
 }

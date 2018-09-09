@@ -16,6 +16,12 @@
   "User": {
     "dataSource": "db"
   },
+  "UserCredential": {
+    "dataSource": "db"
+  },
+  "UserIdentity": {
+    "dataSource": "db"
+  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
