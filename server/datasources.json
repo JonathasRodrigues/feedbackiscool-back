@@ -4,7 +4,7 @@
     "port": 27017,
     "url": "",
     "database": "feedbackiscool",
-    "password": "34361985440324",
+    "password": "34361985440324joh",
     "name": "db",
     "user": "joohny",
     "connector": "mongodb"
