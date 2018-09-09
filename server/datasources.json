@@ -1,6 +1,6 @@
 {
   "db": {
-    "host": "localhost",
+    "host": "tatooine.mongodb.umbler.com",
     "port": 50124,
     "url": "",
     "database": "feedbackiscool",
