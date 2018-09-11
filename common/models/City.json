@@ -15,7 +15,7 @@
       "type": "number",
       "required": true
     },
-    "logitude": {
+    "longitude": {
       "type": "number",
       "required": true
     }
