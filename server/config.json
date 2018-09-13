@@ -19,5 +19,8 @@
       "limit": "100kb"
     },
     "cors": false
+  },
+  "swagger": {
+    "protocol": "https"
   }
 }
