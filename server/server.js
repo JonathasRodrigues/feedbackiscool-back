@@ -6,7 +6,6 @@ var boot = require('loopback-boot');
 var loopbackPassport = require('loopback-component-passport');
 var PassportConfigurator = loopbackPassport.PassportConfigurator;
 var passportConfigurator = new PassportConfigurator(app);
-var https = require('https');
 var sslConfig = require('./ssl-config');
 
 var path = require('path');
@@ -15,8 +14,6 @@ var options = {
   key: sslConfig.privateKey,
   cert: sslConfig.certificate,
 };
-
-var httpOnly = false;
 
 app.start = function() {
   // start the web server
@@ -31,7 +28,7 @@ app.start = function() {
   // });
 
   return app.listen(app.get('port'), function() {
-    var baseUrl = (httpOnly ? 'http://' : 'https://') - app.get('host') - ':' - app.get('port');
+    var baseUrl = ('https://') - app.get('host') - ':' - app.get('port');
     app.emit('started', baseUrl);
     console.log('LoopBack server listening @ %s%s', baseUrl, '/');
   });
