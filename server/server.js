@@ -1,7 +1,6 @@
 'use strict';
 
 var loopback = require('loopback');
-var app = module.exports = loopback();
 var boot = require('loopback-boot');
 var loopbackPassport = require('loopback-component-passport');
 var http = require('http');
@@ -10,12 +9,7 @@ var PassportConfigurator = loopbackPassport.PassportConfigurator;
 var passportConfigurator = new PassportConfigurator(app);
 var sslConfig = require('./ssl-config');
 
-var path = require('path');
-
-var options = {
-  key: sslConfig.privateKey,
-  cert: sslConfig.certificate,
-};
+var app = module.exports = loopback();
 
 // app.start = function() {
 //   return app.listen(function() {
@@ -31,13 +25,13 @@ var options = {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
-  if (err) throw err;
+// boot(app, __dirname, function(err) {
+//   if (err) throw err;
 
-  // start the server if `$ node server.js`
-  if (require.main === module)
-    app.start();
-});
+//   // start the server if `$ node server.js`
+//   if (require.main === module)
+//     app.start();
+// });
 
 // Load the provider configurations
 var config = {};
@@ -62,6 +56,9 @@ for (var s in config) {
   c.session = c.session !== false;
   passportConfigurator.configureProvider(s, c);
 };
+
+// boot scripts mount components like REST API
+boot(app, __dirname);
 
 app.start = function(httpOnly) {
   if (httpOnly === undefined) {
@@ -88,3 +85,8 @@ app.start = function(httpOnly) {
   });
   return server;
 };
+
+// start the server if `$ node server.js`
+if (require.main === module) {
+  app.start();
+}
