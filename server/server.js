@@ -12,11 +12,6 @@ var sslConfig = require('./ssl-config');
 
 var path = require('path');
 
-var options = {
-  key: sslConfig.privateKey,
-  cert: sslConfig.certificate,
-};
-
 // app.start = function() {
 //   return app.listen(function() {
 //     app.emit('started');
@@ -88,3 +83,8 @@ app.start = function(httpOnly) {
   });
   return server;
 };
+
+// start the server if `$ node server.js`
+if (require.main === module) {
+  app.start();
+}
