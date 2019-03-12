@@ -1,0 +1,3 @@
+[submodule "feedbackiscool-front"]
+	path = feedbackiscool-front
+	url = https://github.com/JonathasRodrigues/feedbackiscool-front.git

@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "heroku-postbuild": "cd feedbackiscool-front && yarn && yarn run build"
   },
   "dependencies": {
     "compression": "^1.0.3",

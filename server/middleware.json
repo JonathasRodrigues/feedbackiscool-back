@@ -1,7 +1,7 @@
 {
   "initial:before": {
     "loopback#favicon": {
-      "params": "$!../client/favicon.ico"
+      "params": "$!../feedbackiscool-front/build/favicon.ico"
     }
   },
   "initial": {
@@ -44,8 +44,8 @@
   },
   "files": { 
     "loopback#static": [ 
-      { "name": "publicPath", "paths": ["/"], "params": "$!../client" },
-      { "name": "reactRouter", "paths": ["*"], "params": "$!../client/index.html", "optional":true } ] },
+      { "name": "publicPath", "paths": ["/"], "params": "$!../feedbackiscool-front/build" },
+      { "name": "reactRouter", "paths": ["*"], "params": "$!../feedbackiscool-front/build/index.html", "optional":true } ] },
   "final": {
     "loopback#urlNotFound": {}
   },
