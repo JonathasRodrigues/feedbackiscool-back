@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
-    "heroku-postbuild": "cd feedbackiscool-front && yarn && yarn run build"
+    "heroku-postbuild": "cd feedbackiscool-front && npm && npm run build"
   },
   "dependencies": {
     "compression": "^1.0.3",
