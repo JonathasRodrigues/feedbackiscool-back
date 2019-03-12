@@ -1,12 +1,12 @@
 {
   "db": {
-    "host": "tatooine.mongodb.umbler.com",
-    "port": 50124,
+    "host": "ds123844.mlab.com",
+    "port": 23844,
     "url": "",
-    "database": "feedbackiscool",
-    "password": "34361985440324joh",
+    "database": "heroku_56xzpw4r",
+    "password": "3436198joh",
     "name": "db",
-    "user": "joohny",
+    "user": "jonathasr",
     "connector": "mongodb"
   }
 }
