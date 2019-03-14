@@ -6,6 +6,9 @@
   "options": {
     "validateUpsert": true
   },
+  "scope": {
+    "include": "user"
+  },
   "properties": {
     "schoolId": {
       "type": "string",
