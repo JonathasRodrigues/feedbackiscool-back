@@ -9,6 +9,7 @@ module.exports = function(School) {
       var staffp = 0;
       var tmp = 0;
       var tp = 0;
+      var mx = 0;
       var recommend = 0;
       var noRecommend = 0;
       School.app.models.Review.find({
@@ -23,6 +24,7 @@ module.exports = function(School) {
           teachingMethodPoints: true,
           teachersPoints: true,
           recommend: true,
+          mixNacionalityPoints: true,
         },
       }, function(err, reviews) {
         if (err) return next(err);
@@ -34,6 +36,7 @@ module.exports = function(School) {
             staffp += review.staffPoints;
             tmp += review.teachingMethodPoints;
             tp += review.teachersPoints;
+            mx += review.mixNacionalityPoints;
             if (review.recommend) {
               recommend = recommend + 1;
             } else {
@@ -53,6 +56,8 @@ module.exports = function(School) {
           (Math.round((tmp / rs) / 0.5) * 0.5).toFixed(2);
           ctx.data.teachersPoints =
           (Math.round((tp / rs) / 0.5) * 0.5).toFixed(2);
+          ctx.data.mixNacionality =
+          (Math.round((mx / rs) / 0.5) * 0.5).toFixed(2);
           ctx.data.reviews = reviews.length;
           ctx.data.recommend = recommend;
           ctx.data.noRecommend = noRecommend;
