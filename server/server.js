@@ -49,9 +49,23 @@ passportConfigurator.setupModels({
   userIdentityModel: app.models.userIdentity,
   userCredentialModel: app.models.userCredential,
 });
-// Configure passport strategies for third party auth providers
+
 for (var s in config) {
   var c = config[s];
   c.session = c.session !== false;
+  // overriding default user object
+  c.profileToUser = customProfileToUser;
   passportConfigurator.configureProvider(s, c);
-};
+}
+
+function customProfileToUser(provider, profile, options) {
+  var userInfo = {};
+  if (provider === 'facebook' || provider === 'google') {
+    userInfo = {
+      username: profile._json.first_name + ' ' + profile._json.last_name,
+      password: 'secret',
+      email: profile._json.email,
+    };
+  }
+  return userInfo;
+}
