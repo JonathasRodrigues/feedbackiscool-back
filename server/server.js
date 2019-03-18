@@ -62,7 +62,7 @@ function customProfileToUser(provider, profile, options) {
   var userInfo = {};
   if (provider === 'facebook' || provider === 'google') {
     userInfo = {
-      username: profile._json.first_name + ' ' + profile._json.last_name,
+      username: `${profile._json.first_name} ${profile._json.last_name}`,
       password: 'secret',
       email: profile._json.email,
     };
