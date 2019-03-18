@@ -33,7 +33,7 @@
     "authPath": "/auth/google",
     "callbackPath": "/auth/google/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
-    "failureRedirect": "https://www.feedbackiscool.com",
+    "failureRedirect": "https://www.feedbackiscool.com/loginGoogleError",
     "scope": ["email", "profile"],
     "link": true
   },
