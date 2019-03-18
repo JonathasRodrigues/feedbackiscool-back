@@ -1,9 +1,9 @@
 {
   "db": {
-    "host": "localhost",
-    "port": 27017,
+    "host": "ds123844.mlab.com",
+    "port": 23844,
     "url": "",
-    "database": "feedbackiscool",
+    "database": "heroku_56xzpw4r",
     "password": "3436198joh",
     "name": "db",
     "user": "jonathasr",
