@@ -17,7 +17,7 @@
     "authPath": "/auth/facebook",
     "callbackPath": "/auth/facebook/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
-    "failureRedirect": "/login",
+    "failureRedirect": "https://www.feedbackiscool.com",
     "scope": ["email"],
     "authOptions": {
       "display": "popup"
@@ -29,10 +29,11 @@
     "strategy": "OAuth2Strategy",
     "clientID": "334076154926-21p6574k7o6m6set2t35gmp3tt3d11bj.apps.googleusercontent.com",
     "clientSecret": "joLcLO1kF2IYyYOlONUHm4jS",
-    "callbackURL": "/auth/google/callback",
+    "callbackURL": "https://www.feedbackiscool.com/tlogin",
     "authPath": "/auth/google",
     "callbackPath": "/auth/google/callback",
-    "successRedirect": "https://www.feedbackiscool.com/tlogin",
+    "successRedirect": "/link/account",
+    "failureRedirect": "https://www.feedbackiscool.com",
     "scope": ["email", "profile"]
   },
   "twitter-login": {
