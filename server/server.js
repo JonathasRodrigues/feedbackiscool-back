@@ -70,7 +70,7 @@ function customProfileToUser(provider, profile, options) {
     userInfo = {
       username: profile.displayName,
       password: 'secret',
-      email: profile.email[0].value,
+      email: profile.emails[0].value,
     };
   }
   return userInfo;
