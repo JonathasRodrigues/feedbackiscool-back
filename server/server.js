@@ -60,12 +60,17 @@ for (var s in config) {
 
 function customProfileToUser(provider, profile, options) {
   var userInfo = {};
-  if (provider === 'facebook' || provider === 'google') {
-    console.log(profile);
+  if (provider === 'facebook') {
     userInfo = {
       username: `${profile._json.first_name} ${profile._json.last_name}`,
       password: 'secret',
       email: profile._json.email,
+    };
+  } else if (provider === 'google')  {
+    userInfo = {
+      username: profile.displayName,
+      password: 'secret',
+      email: profile.email[0].value,
     };
   }
   return userInfo;
