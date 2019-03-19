@@ -75,3 +75,9 @@ function customProfileToUser(provider, profile, options) {
   }
   return userInfo;
 }
+
+app.get('/auth/google/callback', function(req, res, next) {
+  res.cookie('access-token', req.signedCookies['access-token']);
+  res.cookie('userId', req.user.id);
+  res.redirect('https://www.feedbackiscool.com/tlogin');
+});

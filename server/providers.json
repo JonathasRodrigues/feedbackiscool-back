@@ -31,8 +31,7 @@
     "callbackPath": "/auth/google/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
-    "scope": ["email", "profile"],
-    "populateSessionStorage": true
+    "scope": ["email", "profile"]
   },
   "twitter-login": {
     "provider": "twitter",
