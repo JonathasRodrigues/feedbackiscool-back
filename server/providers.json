@@ -32,7 +32,7 @@
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
     "scope": ["email", "profile"],
-    "setAccessToken": true
+    "populateSessionStorage": true
   },
   "twitter-login": {
     "provider": "twitter",
