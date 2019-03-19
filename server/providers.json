@@ -28,7 +28,7 @@
     "clientSecret": "joLcLO1kF2IYyYOlONUHm4jS",
     "callbackURL": "/auth/google/callback",
     "authPath": "/auth/google",
-    "callbackPath": "https://www.feedbackiscool.com/tlogin",
+    "callbackPath": "/auth/google/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
     "scope": ["email", "profile"],
