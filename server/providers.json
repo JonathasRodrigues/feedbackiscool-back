@@ -18,10 +18,7 @@
     "callbackPath": "/auth/facebook/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
-    "scope": ["email"],
-    "authOptions": {
-      "display": "popup"
-    }
+    "scope": ["email"]
   },
   "google-login": {
     "provider": "google",
