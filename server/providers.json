@@ -18,8 +18,7 @@
     "callbackPath": "/auth/facebook/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
-    "scope": ["email"],
-    "setAccessToken": true
+    "scope": ["email"]
   },
   "google-login": {
     "provider": "google",
@@ -32,8 +31,7 @@
     "callbackPath": "/auth/google/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
-    "scope": ["email", "profile"],
-    "setAccessToken": true
+    "scope": ["email", "profile"]
   },
   "twitter-login": {
     "provider": "twitter",
