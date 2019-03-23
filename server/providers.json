@@ -15,7 +15,7 @@
     "clientSecret": "163090b414f567ad67d9f5e59fd121e3",
     "callbackURL": "https://www.feedbackiscool.com/batcave/auth/facebook/callback",
     "authPath": "/auth/facebook",
-    "callbackPath": "/batecave/auth/facebook/callback",
+    "callbackPath": "/auth/facebook/callback",
     "successRedirect": "https://www.feedbackiscool.com/tlogin",
     "failureRedirect": "https://www.feedbackiscool.com",
     "scope": ["email"]
